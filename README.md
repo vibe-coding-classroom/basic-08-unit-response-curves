@@ -1,5 +1,3 @@
-Viewed basic-08-unit-response-curves.html:1-386
-
 針對 **`basic-08-unit-response-curves` (曲線優化：線性 vs. 指數響應)** 單元，這是學員建立「人機合一 (Human-Machine Interaction)」操控感的關鍵課程。它要求學員具備 **控制心理學 (Control Psychology)** 的思維，學習如何利用數學參數平衡「直覺反應」與「精密維護」，並透過實時切換 UI 驗證不同演算法在極限繞障場景下的表現差異。
 
 以下是在 **GitHub Classroom** 部署其作業 (Assignments) 的具體建議：
