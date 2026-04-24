@@ -1,0 +1,12 @@
+{
+  "name": "basic-08-unit-response-curves",
+  "version": "1.0.0",
+  "description": "Exponential vs Linear Response Curves - Classroom Project",
+  "main": "js/math_engine.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}

@@ -1,0 +1,185 @@
+:root {
+    /* Base Colors */
+    --bg-dark: #0f172a;
+    --text-main: #f8fafc;
+    --accent-linear: #94a3b8;
+    
+    /* Precision Mode (Cool) */
+    --precision-primary: #38bdf8;
+    --precision-bg: rgba(56, 189, 248, 0.1);
+    --precision-border: #0ea5e9;
+    
+    /* Aggressive Mode (Warm) */
+    --aggressive-primary: #fb7185;
+    --aggressive-bg: rgba(251, 113, 133, 0.1);
+    --aggressive-border: #f43f5e;
+
+    /* Default Theme */
+    --theme-primary: var(--accent-linear);
+    --theme-bg: rgba(148, 163, 184, 0.1);
+    --theme-border: var(--accent-linear);
+    
+    transition: all 0.3s ease;
+}
+
+/* Theme Classes */
+body.theme-precision {
+    --theme-primary: var(--precision-primary);
+    --theme-bg: var(--precision-bg);
+    --theme-border: var(--precision-border);
+}
+
+body.theme-aggressive {
+    --theme-primary: var(--aggressive-primary);
+    --theme-bg: var(--aggressive-bg);
+    --theme-border: var(--aggressive-border);
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, var(--theme-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background: var(--theme-bg);
+    border: 1px solid var(--theme-border);
+    color: var(--theme-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Control Elements */
+.control-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--theme-primary);
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+button.active {
+    background: var(--theme-bg);
+    border-color: var(--theme-border);
+    color: var(--theme-primary);
+}
+
+/* Visualization */
+.viz-panel {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.gauge-container {
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.gauge-bar {
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--theme-primary));
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.gauge-center {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255,255,255,0.2);
+}
+
+.value-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--theme-primary);
+}
