@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Run tests
+      - name: math-engine-tests
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: math-engine-tests
